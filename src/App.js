@@ -1,10 +1,10 @@
 import './App.css';
 
 import { render, router } from './libs';
-import Home from './components/home/Home';
+import HomePage from './pages/HomePage';
 
 const app = document.querySelector('#app');
 
-router.on('/', () => render(Home, app));
+router.on('/', () => render(HomePage, app));
 
 router.resolve();

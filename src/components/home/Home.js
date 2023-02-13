@@ -6,7 +6,6 @@ import ScrollDown from './ScrollDown';
 
 const Home = () => {
     return /*html */ `
-        ${Header()}
         <section class="home section">
             <div class="home__container container grid">
                 <div class="home__content grid">
