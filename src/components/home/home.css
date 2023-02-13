@@ -71,7 +71,7 @@
     width: 300px;
     height: 300px;
     border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
-    animation: profile__animate 30s ease infinite 1s;
+    animation: profile__animate 20s ease infinite 1s;
 }
 
 /* @keyframes profile__animate {
