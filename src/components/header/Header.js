@@ -21,7 +21,7 @@ const Header = () => {
     return /*html */ `
         <header class="header">
             <nav class="nav container">
-                <a href="index.html" class="nav__logo">MVT</a>
+                <a href="#home" class="nav__logo">MVT</a>
                 <div class="${
                     toggleMenu ? 'nav__menu show-menu' : 'nav__menu'
                 }">
@@ -42,13 +42,13 @@ const Header = () => {
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#services" class="nav__link">
-                                <i class="uil uil-briefcase-alt nav__icon"></i> Services
+                            <a href="#qualification" class="nav__link">
+                                <i class="uil uil-briefcase-alt nav__icon"></i> Qualification
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class="uil uil-scenery nav__icon"></i> Portfolio
+                            <a href="#Projects" class="nav__link">
+                                <i class="uil uil-scenery nav__icon"></i> Projects
                             </a>
                         </li>
                         <li class="nav__item">
