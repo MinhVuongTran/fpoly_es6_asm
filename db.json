@@ -1,0 +1,17 @@
+{
+    "skills": {
+        "frontend": [
+            { "id": 1, "name": "HTML", "level": "Basic" },
+            { "id": 2, "name": "CSS", "level": "Advanced" },
+            { "id": 3, "name": "Javascript", "level": "Intermediate" },
+            { "id": 4, "name": "Bootstrap", "level": "Intermediate" },
+            { "id": 5, "name": "Git", "level": "Intermediate" },
+            { "id": 6, "name": "React", "level": "Basic" }
+        ],
+        "backend": [
+            { "id": 1, "name": "PHP", "level": "Basic" },
+            { "id": 1, "name": "NodeJs", "level": "Basic" },
+            { "id": 1, "name": "MySQL", "level": "Basic" }
+        ]
+    }
+}
