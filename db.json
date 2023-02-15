@@ -1,4 +1,10 @@
 {
+    "categories": [
+        { "id": 1, "name": "All" },
+        { "id": 2, "name": "HTML" },
+        { "id": 3, "name": "Javascript" },
+        { "id": 4, "name": "PHP" }
+    ],
     "skills": {
         "frontend": [
             { "id": 1, "name": "HTML", "level": "Basic" },
@@ -13,5 +19,11 @@
             { "id": 1, "name": "NodeJs", "level": "Basic" },
             { "id": 1, "name": "MySQL", "level": "Basic" }
         ]
-    }
+    },
+    "projects": [
+        { "id": 1, "title": "Web design", "categoryId": 2 },
+        { "id": 2, "title": "App movil", "categoryId": 3 },
+        { "id": 3, "title": "TodoList", "categoryId": 3 },
+        { "id": 4, "title": "PolyTro", "categoryId": 4 }
+    ]
 }

@@ -21,13 +21,13 @@ const Header = () => {
     return /*html */ `
         <header class="header">
             <nav class="nav container">
-                <a href="#home" class="nav__logo">MVT</a>
+                <a href="#" class="nav__logo">MVT</a>
                 <div class="${
                     toggleMenu ? 'nav__menu show-menu' : 'nav__menu'
                 }">
                     <ul class="nav__list grid">
                         <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
+                            <a href="#" class="nav__link active-link">
                                 <i class="uil uil-estate nav__icon"></i> Home
                             </a>
                         </li>
@@ -47,7 +47,7 @@ const Header = () => {
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#Projects" class="nav__link">
+                            <a href="#projects" class="nav__link">
                                 <i class="uil uil-scenery nav__icon"></i> Projects
                             </a>
                         </li>
