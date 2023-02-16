@@ -1,29 +1,123 @@
 {
-    "categories": [
-        { "id": 1, "name": "All" },
-        { "id": 2, "name": "HTML" },
-        { "id": 3, "name": "Javascript" },
-        { "id": 4, "name": "PHP" }
-    ],
-    "skills": {
-        "frontend": [
-            { "id": 1, "name": "HTML", "level": "Basic" },
-            { "id": 2, "name": "CSS", "level": "Advanced" },
-            { "id": 3, "name": "Javascript", "level": "Intermediate" },
-            { "id": 4, "name": "Bootstrap", "level": "Intermediate" },
-            { "id": 5, "name": "Git", "level": "Intermediate" },
-            { "id": 6, "name": "React", "level": "Basic" }
-        ],
-        "backend": [
-            { "id": 1, "name": "PHP", "level": "Basic" },
-            { "id": 1, "name": "NodeJs", "level": "Basic" },
-            { "id": 1, "name": "MySQL", "level": "Basic" }
-        ]
+  "categories": [
+    {
+      "id": 1,
+      "name": "All"
     },
-    "projects": [
-        { "id": 1, "title": "Web design", "categoryId": 2 },
-        { "id": 2, "title": "App movil", "categoryId": 3 },
-        { "id": 3, "title": "TodoList", "categoryId": 3 },
-        { "id": 4, "title": "PolyTro", "categoryId": 4 }
+    {
+      "id": 2,
+      "name": "HTML"
+    },
+    {
+      "id": 3,
+      "name": "Javascript"
+    },
+    {
+      "id": 4,
+      "name": "PHP"
+    }
+  ],
+  "skills": {
+    "frontend": [
+      {
+        "id": 1,
+        "name": "HTML",
+        "level": "Basic"
+      },
+      {
+        "id": 2,
+        "name": "CSS",
+        "level": "Advanced"
+      },
+      {
+        "id": 3,
+        "name": "Javascript",
+        "level": "Intermediate"
+      },
+      {
+        "id": 4,
+        "name": "Bootstrap",
+        "level": "Intermediate"
+      },
+      {
+        "id": 5,
+        "name": "Git",
+        "level": "Intermediate"
+      },
+      {
+        "id": 6,
+        "name": "React",
+        "level": "Basic"
+      }
+    ],
+    "backend": [
+      {
+        "id": 1,
+        "name": "PHP",
+        "level": "Basic"
+      },
+      {
+        "id": 1,
+        "name": "NodeJs",
+        "level": "Basic"
+      },
+      {
+        "id": 1,
+        "name": "MySQL",
+        "level": "Basic"
+      }
     ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Web design",
+      "categoryId": 2,
+      "description": "description 1",
+      "thumbnail": "thumbnail 1",
+      "author": "author 1",
+      "link": "link 1",
+      "website": "website 1"
+    },
+    {
+      "id": 2,
+      "title": "App movil",
+      "categoryId": 3,
+      "description": "description 2",
+      "thumbnail": "thumbnail 2",
+      "author": "author 2",
+      "link": "link 2",
+      "website": "website 2"
+    },
+    {
+      "id": 3,
+      "title": "TodoList",
+      "categoryId": 3,
+      "description": "description 3",
+      "thumbnail": "thumbnail 3",
+      "author": "author 3",
+      "link": "link 3",
+      "website": "website 3"
+    },
+    {
+      "id": 4,
+      "title": "PolyTro",
+      "categoryId": 4,
+      "description": "description 4",
+      "thumbnail": "thumbnail 4",
+      "author": "author 4",
+      "link": "link 4",
+      "website": "website 4"
+    },
+    {
+      "title": "12313sdfasa",
+      "categoryId": "3",
+      "description": "dafdaf123",
+      "thumbnail": "dafaa123",
+      "author": "123123",
+      "link": "123213",
+      "website": "12321312",
+      "id": 5
+    }
+  ]
 }
