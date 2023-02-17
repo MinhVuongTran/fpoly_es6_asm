@@ -41,7 +41,7 @@ const AdminProjects = () => {
                     <th>Link code</th>
                     <th>Website</th>
                     <th>
-                        <a href="/admin/projects/add" class="btn btn-primary">Thêm</a>
+                        <a href="/admin/projects/add" class="btn btn-primary fs-4">Thêm</a>
                     </th>
                 </thead>
                 <tbody>
@@ -55,13 +55,13 @@ const AdminProjects = () => {
                         <td>${item.author}</td>
                         <td>${item.link}</td>
                         <td>${item.website}</td>
-                        <td width='150'>
-                            <button class='btn btn-remove btn-danger' data-id=${
+                        <td width='150' class=''>
+                            <button class='btn btn-remove btn-danger fs-4' data-id=${
                                 item.id
                             }>Xóa</button>
                             <a href="/admin/projects/${
                                 item.id
-                            }/edit" class='btn btn-secondary'>Sửa</a>
+                            }/edit" class='btn btn-secondary fs-4'>Sửa</a>
                         </td>
                     </tr>`;
                         })

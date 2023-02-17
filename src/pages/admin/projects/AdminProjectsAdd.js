@@ -26,7 +26,7 @@ const AdminProjectsAdd = () => {
             e.preventDefault();
             const formData = {
                 title: projectName.value,
-                categoryId: projectCateId.value,
+                categoryId: Number(projectCateId.value),
                 description: projectDesc.value,
                 // thumbnail: projectName.value,
                 author: projectAuth.value,
@@ -55,11 +55,11 @@ const AdminProjectsAdd = () => {
             <form action="" id="form">
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="project-name"/>
+                    <input type="text" class="form-control fs-4" id="project-name"/>
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Category</label>
-                    <select class="form-control" id="project-cate">
+                    <select class="form-control fs-4" id="project-cate">
                         <option value="" key="">--Category--</option>
                         ${categories
                             .map((category) => {
@@ -71,25 +71,25 @@ const AdminProjectsAdd = () => {
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Description</label>
-                    <textarea cols="30" rows="10" class="form-control" id="project-desc"></textarea> 
+                    <textarea cols="30" rows="10" class="form-control fs-4" id="project-desc"></textarea> 
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Thumbnail</label>
-                    <input type="file" class="form-control" id="project-thumb"/>
+                    <input type="file" class="form-control fs-4" id="project-thumb"/>
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Author</label>
-                    <input type="text" class="form-control" id="project-auth"/>
+                    <input type="text" class="form-control fs-4" id="project-auth"/>
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Link</label>
-                    <input type="text" class="form-control" id="project-link"/>
+                    <input type="text" class="form-control fs-4" id="project-link"/>
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Website</label>
-                    <input type="text" class="form-control" id="project-website"/>
+                    <input type="text" class="form-control fs-4" id="project-website"/>
                 </div>
-                <button type="submit" class="btn btn-primary">Thêm</button>
+                <button type="submit" class="btn btn-primary fs-3">Thêm</button>
             </form>
         </div>
     `;

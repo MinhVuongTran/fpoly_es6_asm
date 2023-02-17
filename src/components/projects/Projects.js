@@ -5,14 +5,11 @@ const Projects = () => {
     const [projectsNav, setProjectsNav] = useState([]);
     const [projects, setProjects] = useState([]);
     const [active, setActive] = useState(1);
-
     useEffect(() => {
         fetch('http://localhost:3000/categories')
             .then((response) => response.json())
             .then((data) => setProjectsNav(data));
-    }, []);
 
-    useEffect(() => {
         fetch('http://localhost:3000/projects')
             .then((response) => response.json())
             .then((data) => setProjects(data));

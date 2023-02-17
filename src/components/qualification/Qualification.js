@@ -7,8 +7,11 @@ const Qualification = () => {
     useEffect(() => {
         const btns = document.querySelectorAll('.qualification__button');
         for (const btn of btns) {
+            console.log(btn);
+
             const index = Number(btn.dataset.index);
             btn.addEventListener('click', () => {
+                console.log(index);
                 setToggleState(index);
             });
         }

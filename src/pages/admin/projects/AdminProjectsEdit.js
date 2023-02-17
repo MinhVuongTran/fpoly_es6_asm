@@ -16,6 +16,8 @@ const AdminProjectsEdit = ({ id }) => {
     }, []);
 
     useEffect(() => {
+        // const projects = JSON.parse(localStorage.getItem('projects')) || [];
+
         const form = document.querySelector('#form');
         const projectName = document.querySelector('#project-name');
         const projectDesc = document.querySelector('#project-desc');
@@ -29,7 +31,7 @@ const AdminProjectsEdit = ({ id }) => {
             e.preventDefault();
             const formData = {
                 title: projectName.value,
-                categoryId: projectCateId.value,
+                categoryId: Number(projectCateId.value),
                 description: projectDesc.value,
                 // thumbnail: projectName.value,
                 author: projectAuth.value,
@@ -37,14 +39,20 @@ const AdminProjectsEdit = ({ id }) => {
                 website: projectWebsite.value,
             };
             fetch(`http://localhost:3000/projects/${id}`, {
-                method: 'PATCH',
+                method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData),
             }).then(() => router.navigate('/admin/projects'));
+            // let id = Math.round(Math.random() * 100) + 1;
+            // projects.push({
+            //     id: id,
+            //     name: projectName.value,
+            // });
+            // localStorage.setItem('projects', JSON.stringify(projects));
         });
-    }, []);
+    });
 
     return `
         <div class="container">
@@ -52,13 +60,13 @@ const AdminProjectsEdit = ({ id }) => {
             <form id="form">
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="project-name" value="${
+                    <input type="text" class="form-control fs-4" id="project-name" value="${
                         project.title
                     }"/>
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Category</label>
-                    <select class="form-control" id="project-cate">
+                    <select class="form-control fs-4" id="project-cate">
                         <option value="" key="">--Category--</option>
                         ${categories
                             .map((category) => {
@@ -74,35 +82,35 @@ const AdminProjectsEdit = ({ id }) => {
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Description</label>
-                    <textarea cols="30" rows="10" class="form-control" id="project-desc">${
+                    <textarea cols="30" rows="10" class="form-control fs-4" id="project-desc">${
                         project.description
                     }</textarea> 
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Thumbnail</label>
-                    <input type="file" class="form-control" id="project-thumb" value="${
+                    <input type="file" class="form-control fs-4" id="project-thumb" value="${
                         project.thumbnail
                     }"/>
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Author</label>
-                    <input type="text" class="form-control" id="project-auth" value="${
+                    <input type="text" class="form-control fs-4" id="project-auth" value="${
                         project.author
                     }"/>
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Link</label>
-                    <input type="text" class="form-control" id="project-link" value="${
+                    <input type="text" class="form-control fs-4" id="project-link" value="${
                         project.link
                     }"/>
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Website</label>
-                    <input type="text" class="form-control" id="project-website" value="${
+                    <input type="text" class="form-control fs-4" id="project-website" value="${
                         project.website
                     }"/>
                 </div>
-                <button type="submit" class="btn btn-primary">Sửa</button>
+                <button type="submit" class="btn btn-primary fs-3 mt-4">Sửa</button>
             </form>
         </div>
     `;
