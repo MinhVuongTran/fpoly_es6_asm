@@ -21,28 +21,65 @@
 }
 
 .project__container {
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(2, 330px);
     gap: 4.8rem;
     justify-content: center;
 }
 
 .project__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--container-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 2rem;
     border-radius: 1.2rem;
+    min-height: 500px;
+}
+
+.project__img-box {
 }
 
 .project__img {
     width: 295px;
+    height: 210px;
+    object-fit: cover;
     border-radius: 1.2rem;
     margin-bottom: var(--mb-1);
 }
 
 .project__title {
-    font-size: var(--normal-font-size);
+    font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+}
+
+.project__technologies {
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.project__description {
+    color: var(--title-color);
+    margin-bottom: var(--mb-1);
+    display: inline-block;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.project__author {
+    display: block;
     margin-bottom: var(--mb-0-5);
+}
+
+.project__redirect {
+    display: flex;
+    justify-content: space-between;
 }
 
 .project__button {

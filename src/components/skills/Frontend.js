@@ -31,6 +31,8 @@ const Frontend = () => {
                     <span class="skills__level">Intermediate</span>
                 </div>
             </div>
+
+            
         </div>
 
         <div class="skills__group">

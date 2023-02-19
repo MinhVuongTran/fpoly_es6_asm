@@ -1,4 +1,6 @@
 import Navigo from 'navigo';
+import axios from 'axios';
+
 const router = new Navigo('/', { linksSelector: 'a' });
 
 let effects = [];
@@ -110,4 +112,29 @@ router.on('/*', () => {}, {
     },
 });
 
-export { render, useState, useEffect, router };
+const uploadFile = async (files) => {
+    const CLOUND_NAME = 'dxcvs3auk';
+    const PRESET_NAME = 'portfolio';
+    const FOLDER_NAME = 'portfolio';
+
+    let url = '';
+    const api = `https://api.cloudinary.com/v1_1/${CLOUND_NAME}/image/upload`;
+
+    const formData = new FormData();
+
+    formData.append('upload_preset', PRESET_NAME);
+    formData.append('folder', FOLDER_NAME);
+
+    for (const file of files) {
+        formData.append('file', file);
+        const response = await axios.post(api, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        });
+        url += response.data.secure_url;
+    }
+    return url;
+};
+
+export { render, useState, useEffect, router, uploadFile };

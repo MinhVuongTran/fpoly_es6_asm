@@ -1,4 +1,4 @@
-import { useEffect, useState, router } from '../../../libs';
+import { useEffect, useState, router, uploadFile } from '../../../libs';
 
 const AdminProjectsAdd = () => {
     const [categories, setCategories] = useState([]);
@@ -15,6 +15,7 @@ const AdminProjectsAdd = () => {
 
         const form = document.querySelector('#form');
         const projectName = document.querySelector('#project-name');
+        const projectTech = document.querySelector('#project-tech');
         const projectDesc = document.querySelector('#project-desc');
         const projectCateId = document.querySelector('#project-cate');
         const projectThumb = document.querySelector('#project-thumb');
@@ -22,13 +23,15 @@ const AdminProjectsAdd = () => {
         const projectLink = document.querySelector('#project-link');
         const projectWebsite = document.querySelector('#project-website');
 
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
+            const thumbnail = await uploadFile(projectThumb.files);
             const formData = {
                 title: projectName.value,
                 categoryId: Number(projectCateId.value),
+                technologies: projectTech.value,
                 description: projectDesc.value,
-                // thumbnail: projectName.value,
+                thumbnail,
                 author: projectAuth.value,
                 link: projectLink.value,
                 website: projectWebsite.value,
@@ -40,12 +43,6 @@ const AdminProjectsAdd = () => {
                 },
                 body: JSON.stringify(formData),
             }).then(() => router.navigate('/admin/projects'));
-            // let id = Math.round(Math.random() * 100) + 1;
-            // projects.push({
-            //     id: id,
-            //     name: projectName.value,
-            // });
-            // localStorage.setItem('projects', JSON.stringify(projects));
         });
     });
 
@@ -68,6 +65,10 @@ const AdminProjectsAdd = () => {
                             })
                             .join('')}
                     </select>
+                </div>
+                <div class="form-group mb-2">
+                    <label for="project-name" class="form-label">Technologies</label>
+                    <input type="text" class="form-control fs-4" id="project-tech"/>
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Description</label>

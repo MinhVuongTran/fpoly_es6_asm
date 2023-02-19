@@ -71,33 +71,47 @@
   "projects": [
     {
       "id": 1,
-      "title": "Web design",
+      "title": "Winer holiday",
       "categoryId": 2,
-      "description": "description 1",
-      "thumbnail": "thumbnail 1",
-      "author": "author 1",
-      "link": "link 1",
-      "website": "website 1"
+      "technologies": "HTML, CSS",
+      "description": "Winter holiday",
+      "thumbnail": "https://res.cloudinary.com/dxcvs3auk/image/upload/v1676790222/portfolio/yqtvgyzfynszf31b9tud.png",
+      "author": "Minh Vuong ",
+      "link": "https://github.com/MinhVuongTran/winter_holiday-demo",
+      "website": "https://winter-holiday-demo.vercel.app/"
     },
     {
       "id": 2,
-      "title": "App movil",
+      "title": "Weather App",
       "categoryId": 3,
-      "description": "description 2",
-      "thumbnail": "thumbnail 2",
+      "technologies": "HTML, CSS, Javascript",
+      "description": "Weather app",
+      "thumbnail": "https://res.cloudinary.com/dxcvs3auk/image/upload/v1676791205/portfolio/jo8ehkt78l0qtycj0nzv.png",
       "author": "author 2",
-      "link": "link 2",
-      "website": "website 2"
+      "link": "https://github.com/MinhVuongTran/weather_app",
+      "website": "https://weather-app-psi-teal.vercel.app/"
     },
     {
       "id": 3,
-      "title": "TodoList",
+      "title": "Todo app ",
       "categoryId": 3,
-      "description": "description 3",
-      "thumbnail": "thumbnail 3",
-      "author": "author 3",
-      "link": "link 3",
-      "website": "website 3"
+      "technologies": "Redux",
+      "description": "Todo app redux",
+      "thumbnail": "https://res.cloudinary.com/dxcvs3auk/image/upload/v1676791736/portfolio/ft5mckpbergclmajdz7q.png",
+      "author": "Minh Vuong",
+      "link": "https://github.com/MinhVuongTran/todo-app-redux",
+      "website": "https://todo-app-redux-eight.vercel.app/"
+    },
+    {
+      "title": "Poly Trọ",
+      "categoryId": 3,
+      "description": "Dịch vụ cho thuê phòng trọ cho sinh viên cao đẳng FPT Polytechnic",
+      "technologies": "ReactJS, JavaScript, PHP, MySQL",
+      "author": "Minh Vương. Trí Dũng, Thanh Minh, Huy Hiệp",
+      "thumbnail": "https://res.cloudinary.com/dxcvs3auk/image/upload/v1676788316/portfolio/rcqmtegbja1dbdd9b4y6.jpg",
+      "link": "https://github.com/MinhVuongTran/poly_tro",
+      "website": "",
+      "id": 4
     }
   ]
 }

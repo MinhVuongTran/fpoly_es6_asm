@@ -1,4 +1,4 @@
-import { useEffect, useState, router } from '../../../libs';
+import { useEffect, useState, router, uploadFile } from '../../../libs';
 
 const AdminProjectsEdit = ({ id }) => {
     const [project, setProject] = useState([]);
@@ -20,6 +20,7 @@ const AdminProjectsEdit = ({ id }) => {
 
         const form = document.querySelector('#form');
         const projectName = document.querySelector('#project-name');
+        const projectTech = document.querySelector('#project-tech');
         const projectDesc = document.querySelector('#project-desc');
         const projectCateId = document.querySelector('#project-cate');
         const projectThumb = document.querySelector('#project-thumb');
@@ -27,30 +28,32 @@ const AdminProjectsEdit = ({ id }) => {
         const projectLink = document.querySelector('#project-link');
         const projectWebsite = document.querySelector('#project-website');
 
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
+            let thumbnail;
+            if (projectThumb.files.length === 0) {
+                thumbnail = project.thumbnail;
+            } else {
+                thumbnail = await uploadFile(projectThumb.files);
+            }
+
             const formData = {
                 title: projectName.value,
                 categoryId: Number(projectCateId.value),
+                technologies: projectTech.value,
                 description: projectDesc.value,
-                // thumbnail: projectName.value,
+                thumbnail,
                 author: projectAuth.value,
                 link: projectLink.value,
                 website: projectWebsite.value,
             };
             fetch(`http://localhost:3000/projects/${id}`, {
-                method: 'PUT',
+                method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData),
             }).then(() => router.navigate('/admin/projects'));
-            // let id = Math.round(Math.random() * 100) + 1;
-            // projects.push({
-            //     id: id,
-            //     name: projectName.value,
-            // });
-            // localStorage.setItem('projects', JSON.stringify(projects));
         });
     });
 
@@ -81,6 +84,12 @@ const AdminProjectsEdit = ({ id }) => {
                     </select>
                 </div>
                 <div class="form-group mb-2">
+                    <label for="project-name" class="form-label">Technologies</label>
+                    <input type="text" class="form-control fs-4" id="project-tech" value="${
+                        project.technologies
+                    }"/>
+                </div>
+                <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Description</label>
                     <textarea cols="30" rows="10" class="form-control fs-4" id="project-desc">${
                         project.description
@@ -88,9 +97,7 @@ const AdminProjectsEdit = ({ id }) => {
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Thumbnail</label>
-                    <input type="file" class="form-control fs-4" id="project-thumb" value="${
-                        project.thumbnail
-                    }"/>
+                    <input type="file" class="form-control fs-4" id="project-thumb"/>
                 </div>
                 <div class="form-group mb-2">
                     <label for="project-name" class="form-label">Author</label>
