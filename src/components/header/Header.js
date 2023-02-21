@@ -23,7 +23,7 @@ const Header = () => {
                 <div class="${
                     toggleMenu ? 'nav__menu show-menu' : 'nav__menu'
                 }">
-                    <ul class="nav__list grid">
+                    <ul class="nav__list">
                         <li class="nav__item">
                             <a href="/#" class="nav__link active-link">
                                 <i class="uil uil-estate nav__icon"></i> Home
