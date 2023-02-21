@@ -16,43 +16,41 @@ const Header = () => {
         });
     }, [toggleMenu]);
 
-    useEffect(() => {}, []);
-
     return /*html */ `
         <header class="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">MVT</a>
+                <a href="/" class="nav__logo">MVT</a>
                 <div class="${
                     toggleMenu ? 'nav__menu show-menu' : 'nav__menu'
                 }">
                     <ul class="nav__list grid">
                         <li class="nav__item">
-                            <a href="#" class="nav__link active-link">
+                            <a href="/#" class="nav__link active-link">
                                 <i class="uil uil-estate nav__icon"></i> Home
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#about" class="nav__link ">
+                            <a href="/#about" class="nav__link ">
                                 <i class="uil uil-user nav__icon"></i> About
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#skills" class="nav__link">
+                            <a href="/#skills" class="nav__link">
                                 <i class="uil uil-file-alt nav__icon"></i> Skills
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#qualification" class="nav__link">
+                            <a href="/#qualification" class="nav__link">
                                 <i class="uil uil-briefcase-alt nav__icon"></i> Qualification
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#projects" class="nav__link">
+                            <a href="/#projects" class="nav__link">
                                 <i class="uil uil-scenery nav__icon"></i> Projects
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#contact" class="nav__link">
+                            <a href="/#contact" class="nav__link">
                                 <i class="uil uil-message nav__icon"></i> Contact
                             </a>
                         </li>

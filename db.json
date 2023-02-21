@@ -1,4 +1,15 @@
 {
+  "information": {
+    "fullname": "Trần Minh Vương ",
+    "description": "Xin chào, mình là Minh Vương.Hiện tại mình đang theo học tại cao đẳng FPT Polytechnic. Ước mơ của mình là trở thành 1 lập trình viên Frontend chuyên nghiệp",
+    "email": "minhvuongtran2003@gmail.com",
+    "phoneNumber": "0374374470",
+    "facebook": "Trần Minh Vương",
+    "linkFacebook": "https://www.facebook.com/profile.php?id=100041592819589",
+    "linkInstagram": "https://www.instagram.com/tr.minhvuong/",
+    "github": "https://github.com/MinhVuongTran",
+    "avatar": "https://res.cloudinary.com/dxcvs3auk/image/upload/v1676949056/portfolio/r8ux04em9agcslxvrajc.jpg"
+  },
   "categories": [
     {
       "id": 1,
@@ -17,57 +28,72 @@
       "name": "PHP"
     }
   ],
-  "skills": {
-    "frontend": [
-      {
-        "id": 1,
-        "name": "HTML",
-        "level": "Basic"
-      },
-      {
-        "id": 2,
-        "name": "CSS",
-        "level": "Advanced"
-      },
-      {
-        "id": 3,
-        "name": "Javascript",
-        "level": "Intermediate"
-      },
-      {
-        "id": 4,
-        "name": "Bootstrap",
-        "level": "Intermediate"
-      },
-      {
-        "id": 5,
-        "name": "Git",
-        "level": "Intermediate"
-      },
-      {
-        "id": 6,
-        "name": "React",
-        "level": "Basic"
-      }
-    ],
-    "backend": [
-      {
-        "id": 1,
-        "name": "PHP",
-        "level": "Basic"
-      },
-      {
-        "id": 1,
-        "name": "NodeJs",
-        "level": "Basic"
-      },
-      {
-        "id": 1,
-        "name": "MySQL",
-        "level": "Basic"
-      }
-    ]
-  },
+  "skillCategories": [
+    {
+      "id": 1,
+      "name": "Frontend"
+    },
+    {
+      "id": 2,
+      "name": "Backend"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "HTML",
+      "level": "Basic",
+      "skillCategoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "CSS",
+      "level": "Advanced",
+      "skillCategoryId": 1
+    },
+    {
+      "id": 3,
+      "name": "Javascript",
+      "level": "Intermediate",
+      "skillCategoryId": 1
+    },
+    {
+      "id": 4,
+      "name": "Bootstrap",
+      "level": "Intermediate",
+      "skillCategoryId": 1
+    },
+    {
+      "id": 5,
+      "name": "GitHub",
+      "level": "Intermediate",
+      "skillCategoryId": 1
+    },
+    {
+      "id": 6,
+      "name": "React",
+      "level": "Basic",
+      "skillCategoryId": 1
+    },
+    {
+      "id": 8,
+      "name": "PHP",
+      "level": "Basic",
+      "skillCategoryId": 2
+    },
+    {
+      "id": 9,
+      "name": "NodeJs",
+      "level": "Basic",
+      "skillCategoryId": 2
+    },
+    {
+      "name": "MySQL",
+      "skillCategoryId": 2,
+      "level": "Basic",
+      "id": 10
+    }
+  ],
   "projects": [
     {
       "id": 1,
@@ -76,7 +102,7 @@
       "technologies": "HTML, CSS",
       "description": "Winter holiday",
       "thumbnail": "https://res.cloudinary.com/dxcvs3auk/image/upload/v1676790222/portfolio/yqtvgyzfynszf31b9tud.png",
-      "author": "Minh Vuong ",
+      "author": "Minh Vương",
       "link": "https://github.com/MinhVuongTran/winter_holiday-demo",
       "website": "https://winter-holiday-demo.vercel.app/"
     },
@@ -87,7 +113,7 @@
       "technologies": "HTML, CSS, Javascript",
       "description": "Weather app",
       "thumbnail": "https://res.cloudinary.com/dxcvs3auk/image/upload/v1676791205/portfolio/jo8ehkt78l0qtycj0nzv.png",
-      "author": "author 2",
+      "author": "Trần Minh Vương",
       "link": "https://github.com/MinhVuongTran/weather_app",
       "website": "https://weather-app-psi-teal.vercel.app/"
     },
@@ -104,7 +130,7 @@
     },
     {
       "title": "Poly Trọ",
-      "categoryId": 3,
+      "categoryId": 4,
       "description": "Dịch vụ cho thuê phòng trọ cho sinh viên cao đẳng FPT Polytechnic",
       "technologies": "ReactJS, JavaScript, PHP, MySQL",
       "author": "Minh Vương. Trí Dũng, Thanh Minh, Huy Hiệp",

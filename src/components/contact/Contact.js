@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import './contact.css';
 import { useEffect } from '../../libs';
 
-const Contact = () => {
+const Contact = ({ email, phoneNumber, facebook }) => {
     useEffect(() => {
         const form = document.querySelector('.contact__form');
         form.addEventListener('submit', (e) => {
@@ -40,9 +40,9 @@ const Contact = () => {
                         <div class='contact__card'>
                             <i class='bx bx-mail-send contact__card-icon'></i>
                             <h3 class='contact__card-title'>Email</h3>
-                            <span class='contact__card-data'>minhvuongtran2003@gmail.com</span>
+                            <span class='contact__card-data'>${email}</span>
 
-                            <a href="mailto:minhvuongtran2003@gmail.com" class='contact__button'>
+                            <a href="mailto:${email}" class='contact__button'>
                                 Write me
                                 <i class='bx bx-right-arrow-alt contact__button-icon'></i>
                             </a>
@@ -51,7 +51,7 @@ const Contact = () => {
                         <div class='contact__card'>
                             <i class='bx bxl-telegram contact__card-icon'></i>
                             <h3 class='contact__card-title'>Telegram</h3>
-                            <span class='contact__card-data'>+84 374 374 470</span>
+                            <span class='contact__card-data'>${phoneNumber}</span>
 
                             <a href="#" class='contact__button'>
                                 Write me
@@ -62,7 +62,7 @@ const Contact = () => {
                         <div class='contact__card'>
                             <i class='bx bxl-facebook contact__card-icon'></i>
                             <h3 class='contact__card-title'>Facebook</h3>
-                            <span class='contact__card-data'>Trần Minh Vương</span>
+                            <span class='contact__card-data'>${facebook}</span>
 
                             <a href="https://www.facebook.com/profile.php?id=100041592819589" class='contact__button'>
                                 Write me

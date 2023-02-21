@@ -1,0 +1,22 @@
+.information__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.information__field {
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    color: var(--title-color-dark);
+    padding: 1.2rem;
+}
+
+.information__value {
+    color: var(--title-color);
+    padding: 1.2rem 4rem;
+    border-bottom: 1px solid #ccc;
+}
+.information__button {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}

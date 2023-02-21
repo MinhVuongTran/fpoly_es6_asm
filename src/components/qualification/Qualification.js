@@ -9,7 +9,6 @@ const Qualification = () => {
         for (const btn of btns) {
             const index = Number(btn.dataset.index);
             btn.addEventListener('click', () => {
-                console.log(index);
                 setToggleState(index);
             });
         }

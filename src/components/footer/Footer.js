@@ -1,6 +1,6 @@
 import './footer.css';
 
-const Footer = () => {
+const Footer = ({ github, linkFacebook, linkInstagram }) => {
     return /*html*/ `
         <footer class='footer'>
             <div class='footer__container container'>
@@ -8,24 +8,27 @@ const Footer = () => {
 
                 <ul class='footer__list'>
                     <li>
-                        <a href="#about" class='footer__link'>About</a>
+                        <a href="/#about" class='footer__link'>About</a>
                     </li>
                     <li>
-                        <a href="#skills" class='footer__link'>skills</a>
+                        <a href="/#skills" class='footer__link'>Skills</a>
                     </li>
                     <li>
-                        <a href="#projects" class='footer__link'>Projects</a>
+                        <a href="/#qualification" class='footer__link'>Qualification</a>
+                    </li>
+                    <li>
+                        <a href="/#projects" class='footer__link'>Projects</a>
                     </li>
                 </ul>
 
                 <div class='footer__social'>
-                    <a href="https://www.facebook.com/profile.php?id=100041592819589" class="footer__social-link" target="_blank">
+                    <a href="${linkFacebook}" class="footer__social-link" target="_blank">
                         <i class="uil uil-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/tr.minhvuong/" class="footer__social-link" target="_blank">
+                    <a href="${linkInstagram}" class="footer__social-link" target="_blank">
                         <i class="uil uil-instagram"></i>
                     </a>
-                    <a href="https://github.com/MinhVuongTran" class="footer__social-link" target="_blank">
+                    <a href="${github}" class="footer__social-link" target="_blank">
                         <i class="uil uil-github-alt"></i>
                     </a>                
                 </div>

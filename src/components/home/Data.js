@@ -1,8 +1,8 @@
-const Data = () => {
+const Data = ({ fullname, description }) => {
     return /*html */ `
     <div class="home__data">
         <h1 class="home__title">
-            Minh Vương 
+            ${fullname}
             <svg
                   width="36"
                   height="36"
@@ -58,7 +58,7 @@ const Data = () => {
             Web Developer
         </h3>
         
-        <p class="home__description">Hello, I'm Minh Vuong</p>
+        <p class="home__description">${description}</p>
         <a href="#contact" class="button button--flex">
         Say Hello 
             <svg

@@ -1,4 +1,5 @@
 import { useEffect, useState, router, uploadFile } from '../../../libs';
+import AdminHeader from '../../../components/header/AdminHeader';
 
 const AdminProjectsEdit = ({ id }) => {
     const [project, setProject] = useState([]);
@@ -58,68 +59,73 @@ const AdminProjectsEdit = ({ id }) => {
     });
 
     return `
-        <div class="container">
-            <h1>Thêm sản phẩm</h1>
-            <form id="form">
-                <div class="form-group mb-2">
-                    <label for="project-name" class="form-label">Name</label>
-                    <input type="text" class="form-control fs-4" id="project-name" value="${
-                        project.title
-                    }"/>
-                </div>
-                <div class="form-group mb-2">
-                    <label for="project-name" class="form-label">Category</label>
-                    <select class="form-control fs-4" id="project-cate">
-                        <option value="" key="">--Category--</option>
-                        ${categories
-                            .map((category) => {
-                                if (category.name !== 'All')
-                                    return `<option value="${category.id}" ${
-                                        category.id === project.categoryId
-                                            ? 'selected=selected'
-                                            : ''
-                                    }>${category.name}</option>`;
-                            })
-                            .join('')}
-                    </select>
-                </div>
-                <div class="form-group mb-2">
-                    <label for="project-name" class="form-label">Technologies</label>
-                    <input type="text" class="form-control fs-4" id="project-tech" value="${
-                        project.technologies
-                    }"/>
-                </div>
-                <div class="form-group mb-2">
-                    <label for="project-name" class="form-label">Description</label>
-                    <textarea cols="30" rows="10" class="form-control fs-4" id="project-desc">${
-                        project.description
-                    }</textarea> 
-                </div>
-                <div class="form-group mb-2">
-                    <label for="project-name" class="form-label">Thumbnail</label>
-                    <input type="file" class="form-control fs-4" id="project-thumb"/>
-                </div>
-                <div class="form-group mb-2">
-                    <label for="project-name" class="form-label">Author</label>
-                    <input type="text" class="form-control fs-4" id="project-auth" value="${
-                        project.author
-                    }"/>
-                </div>
-                <div class="form-group mb-2">
-                    <label for="project-name" class="form-label">Link</label>
-                    <input type="text" class="form-control fs-4" id="project-link" value="${
-                        project.link
-                    }"/>
-                </div>
-                <div class="form-group mb-2">
-                    <label for="project-name" class="form-label">Website</label>
-                    <input type="text" class="form-control fs-4" id="project-website" value="${
-                        project.website
-                    }"/>
-                </div>
-                <button type="submit" class="btn btn-primary fs-3 mt-4">Sửa</button>
-            </form>
-        </div>
+        <section class='section'>
+            ${AdminHeader()}
+            <div class="container">
+                <h1>Thêm sản phẩm</h1>
+                <form id="form">
+                    <div class="form-group mb-2">
+                        <label for="project-name" class="form-label">Name</label>
+                        <input type="text" class="form-control fs-4" id="project-name" value="${
+                            project.title
+                        }"/>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="project-name" class="form-label">Category</label>
+                        <select class="form-control fs-4" id="project-cate">
+                            <option value="" key="">--Category--</option>
+                            ${categories
+                                .map((category) => {
+                                    if (category.name !== 'All')
+                                        return `<option value="${
+                                            category.id
+                                        }" ${
+                                            category.id === project.categoryId
+                                                ? 'selected=selected'
+                                                : ''
+                                        }>${category.name}</option>`;
+                                })
+                                .join('')}
+                        </select>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="project-name" class="form-label">Technologies</label>
+                        <input type="text" class="form-control fs-4" id="project-tech" value="${
+                            project.technologies
+                        }"/>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="project-name" class="form-label">Description</label>
+                        <textarea cols="30" rows="10" class="form-control fs-4" id="project-desc">${
+                            project.description
+                        }</textarea> 
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="project-name" class="form-label">Thumbnail</label>
+                        <input type="file" class="form-control fs-4" id="project-thumb"/>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="project-name" class="form-label">Author</label>
+                        <input type="text" class="form-control fs-4" id="project-auth" value="${
+                            project.author
+                        }"/>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="project-name" class="form-label">Link</label>
+                        <input type="text" class="form-control fs-4" id="project-link" value="${
+                            project.link
+                        }"/>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="project-name" class="form-label">Website</label>
+                        <input type="text" class="form-control fs-4" id="project-website" value="${
+                            project.website
+                        }"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary fs-3 mt-4">Sửa</button>
+                </form>
+            </div>
+        </section>
     `;
 };
 
